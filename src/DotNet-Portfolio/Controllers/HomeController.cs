@@ -14,7 +14,8 @@ namespace DotNet_Portfolio.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            Github.TestGitAPI();
+            //Github.TestGitAPI();//works
+            Github.GetGitRepos();
             return View();
         }
     }
