@@ -13,7 +13,8 @@ This is an app that lets a user view my starred repositories on GitHub, and how 
 | sift through data returned from RestSharp call | X |
 | add mvc view to show data in a friendly format | X |
 | add various other mvc pages to fill out the site | X |
-
+| ---|---|
+| add search function so a user can search for anyone's starred repos | X |
 <hr>
 
 ## Project Build
@@ -41,7 +42,7 @@ After installation and Migration, press f5 or the play button in the toolbar to 
 
 ## Known Bugs
 
-No Bugs yet.
+Searching is not precise, no error checking for form entry.
 
 ## Technologies Utilized
 
