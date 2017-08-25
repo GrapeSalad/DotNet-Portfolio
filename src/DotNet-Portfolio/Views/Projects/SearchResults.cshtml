@@ -3,8 +3,9 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <h2>@Model.items[0].owner.login Repos</h2>
-<p>This page keeps track of the starred repositories on @Model.items[0].owner.login 's github.</p>
+<p>This page keeps track of the starred repositories on <strong>@Model.items[0].owner.login</strong>'s github.</p>
 <p>This was for a solo project at <a href="https://www.epicodus.com/">Epicodus</a> on 8/25</p>
+<p>If nothing is visible, <strong>@Model.items[0].owner.login</strong> may not have any starred repositories!</p>
 
 @foreach (var item in @Model.items)
 {
@@ -33,9 +34,8 @@
                     <br>
                     <p>@item.description</p>
                     <br>
-                    <!-- blog goes here -->
                 </div>
             </div>
         </div>
-                        }
-                        }
+    }
+}
