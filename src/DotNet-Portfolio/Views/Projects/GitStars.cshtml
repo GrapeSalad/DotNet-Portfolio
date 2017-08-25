@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "GitHub Stars";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>My Repos</h2>
+<p>This page keeps track of the starred repositories on my github.</p>
+<p>This was for a solo project at <a href="https://www.epicodus.com/">Epicodus</a> on 8/25</p>
+@foreach (var item in @Model.items)
+{
+    @if (@item.stargazers_count > 0)
+    {
+        <div id="inner-sidebar">
+            <div class="mui--text-light mui--text-display1 mui--align-vertical">@item.name</div>
+        </div>
+        <div id="inner-content" class="mui-container-fluid">
+            <div class="mui-row test">
+                <div class="mui-col-sm-10 mui-col-sm-offset-1">
+                    <div class="mui--text-dark-secondary mui--text-body2">Number of Stars</div>
+                    <div class="mui-divider"></div>
+                    <br>
+                    @{
+                        int count = @item.stargazers_count;
+                    }
+                    @for (int k = 0; k < @count; k++)
+                    {
+                        <img src="~/img/happyStar.gif" height="50" width="50" />
+                    }
+                    <br>
+                    <br>
+                    <div class="mui--text-dark-secondary mui--text-body2">Description</div>
+                    <div class="mui-divider"></div>
+                    <br>
+                    <p>@item.description</p>
+                    <br>
+                    <!-- blog goes here -->
+                </div>
+            </div>
+        </div>
+    }
+}

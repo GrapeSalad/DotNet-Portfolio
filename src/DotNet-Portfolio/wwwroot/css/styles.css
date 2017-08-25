@@ -1,0 +1,207 @@
+﻿/**
+ * Body CSS
+ */
+html,
+body {
+  height: 100%;
+  background-color: #e3e8f1;
+}
+
+html,
+body,
+input,
+textarea,
+buttons {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+}
+.mui-appbar{
+    background-color: #b3b2d1 !important;
+}
+
+/**
+ * Layout CSS
+ */
+#header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  transition: left 0.2s;
+}
+
+#sidedrawer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 200px;
+  left: -200px;
+  overflow: auto;
+  z-index: 2;
+  background-color: #fff;
+  background-image: url("../img/starryBanner.jpg");
+  background-repeat: no-repeat;
+  transition: transform 0.2s;
+  color: #fff;
+}
+
+#content-wrapper {
+  min-height: 100%;
+  overflow-x: hidden;
+  margin-left: 0px;
+  transition: margin-left 0.2s;
+  margin-top: 80px;
+  /* sticky bottom */
+  margin-bottom: -160px;
+  padding-bottom: 160px;
+}
+
+#footer {
+  height: 160px;
+  margin-left: 0px;
+  transition: margin-left 0.2s;
+}
+
+#patrickGif {
+    float: right;
+    position: relative;
+    clear: both;
+    margin-top: -50px;
+    right: -15px;
+}
+
+@media (min-width: 768px) {
+  #header {
+    left: 200px;
+  }
+
+  #sidedrawer {
+    transform: translate(200px);
+  }
+
+  #content-wrapper {
+    margin-left: 200px;
+  }
+
+  #footer {
+    margin-left: 200px;
+  }
+
+  body.hide-sidedrawer #header {
+    left: 0;
+  }
+
+  body.hide-sidedrawer #sidedrawer {
+    transform: translate(0px);
+  }
+
+  body.hide-sidedrawer #content-wrapper {
+    margin-left: 0;
+  }
+
+  body.hide-sidedrawer #footer {
+    margin-left: 0;
+  }
+}
+
+
+/**
+ * Toggle Side drawer
+ */
+#sidedrawer.active {
+  transform: translate(200px);
+}
+
+/**
+ * Side drawer CSS
+ */
+#sidedrawer-brand {
+  padding-left: 20px;
+}
+
+#sidedrawer ul {
+  list-style: none;
+}
+
+#sidedrawer > ul {
+  padding-left: 0px;
+}
+
+#sidedrawer > ul > li:first-child {
+  padding-top: 15px;
+}
+
+#sidedrawer strong {
+  display: block;
+  padding: 15px 22px;
+  cursor: pointer;
+}
+
+#sidedrawer strong:hover {
+  background-color: rgba(227,232,241, .8);
+}
+
+#sidedrawer strong + ul > li {
+  padding: 6px 0px;
+}
+
+/**
+ * Inner Side drawer CSS
+ */
+#inner-sidebar {
+  background-color: #4a4141;
+  padding: 15px;
+}
+
+@media (min-width: 768px) {
+  #inner-sidebar {
+    position: relative;
+    width: 180px;
+    height: 100%;
+    padding-top: 30px;
+  }
+}
+@media (min-width: 768px) {
+  #inner-content {
+    margin-left: 180px;
+  }
+    .test{
+        position: relative;
+        top: -100px;
+    }
+}
+#github {
+    border-bottom: 1px solid #fff;
+}
+
+/**
+ * Header CSS
+ */
+.sidedrawer-toggle {
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 20px;
+  margin-right: 10px;
+}
+
+.sidedrawer-toggle:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+/**
+ * Footer CSS
+ */
+#footer {
+  background-color: #0288D1;
+  color: #fff;
+}
+
+#footer a {
+  color: #fff;
+  text-decoration: underline;
+}
