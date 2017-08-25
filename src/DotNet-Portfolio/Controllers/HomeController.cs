@@ -15,7 +15,8 @@ namespace DotNet_Portfolio.Controllers
         public IActionResult Index()
         {
             //Github.TestGitAPI();//works
-            Github.GetGitRepos();
+            //Github.GetGitRepos();//works, returns a JArray of 30 repos
+            Github.GetStarredRepos();
             return View();
         }
     }
