@@ -20,6 +20,20 @@ namespace DotNet_Portfolio.Controllers
             JObject githubRepos = Github.GetStarredRepos();
             return View(githubRepos);
         }
+
+        public IActionResult StarSearch()
+        {
+            return View();
+        }
+        public IActionResult SearchForm()
+        {
+            return View();
+        }
+        public IActionResult SearchResults(string Name)
+        {
+            JObject resultOfSearchRepos = Github.SearchForStarredReposByUser(Name);
+            return View(resultOfSearchRepos);
+        }
         public IActionResult DigitalEase()
         {
             return View();

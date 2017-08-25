@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "GitHub Star-Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script>
+    $(document).ready(function () {
+        $('.clickable').click(function () {
+            $.ajax({
+                type: 'GET',
+                dataType: 'html',
+                url: '@Url.Action("SearchForm")',
+                success: function (result) {
+                    $('#showForm').html(result);
+                }
+            });
+        });
+        $('#searchForm').submit(function (event) {
+            event.PreventDefault();
+            console.log($(this).serialize());
+            $.ajax({
+                type: 'GET',
+                dataType: 'html',
+                url: '@Url.Action("SearchResults")',
+                data: $(this).serialize(),
+                success: function (result) {
+                    $('#searchFormResult').html(result);
+                }
+            });
+        });
+    });
+</script>
+
+<h2>Ajax/API</h2>
+<p>Here you can search for a github user, and see their starred, public repos</p>
+
+<button class="mui--text-button clickable">Click me!</button>
+<div id="showForm"></div>
+

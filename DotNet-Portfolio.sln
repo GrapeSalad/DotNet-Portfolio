@@ -7,8 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BDFDF656-3E2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D0DD643A-5EE8-4D42-A7EC-43FC840F2475}"
 	ProjectSection(SolutionItems) = preProject
-		.gitignore = .gitignore
 		global.json = global.json
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "DotNet-Portfolio", "src\DotNet-Portfolio\DotNet-Portfolio.xproj", "{F611312A-8DFF-4940-82F2-21F454A86288}"
